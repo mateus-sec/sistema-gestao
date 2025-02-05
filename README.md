@@ -2,11 +2,20 @@
 
 - Sistema de Gestão de Estoque (SGE), um projeto desenvolvido em Django e Bootstrap 5 para facilitar o gerenciamento de estoque. 
 
-# Gráficos
-- Para os gráficos foi usado a biblioteca **chart.js**
+
+# Requisitos
+
+- Python (3.7 ou superior)
 
 
+# Instalação das Dependências
 
+Instale as dependências do projeto usando o comando:
+
+``` bash
+pip install -r requirements.txt
+
+```
 
 
 

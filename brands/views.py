@@ -5,7 +5,6 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView, D
 from . import models, forms, serializers
 
 
-
 class BrandListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = models.Brand
     template_name = 'brand_list.html'

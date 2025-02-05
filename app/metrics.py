@@ -21,6 +21,7 @@ def get_product_metrics():
         total_profit=number_format(total_profit, decimal_pos=2, force_grouping=True),
     )
 
+
 def get_sales_metrics():
     total_sales = Outflow.objects.count()
     total_products_sold = Outflow.objects.aggregate(total_products_sold=Sum('quantity'))['total_products_sold'] or 0
@@ -34,6 +35,7 @@ def get_sales_metrics():
         total_sales_value=number_format(total_sales_value, decimal_pos=2, force_grouping=True),
         total_sales_profit=number_format(total_sales_profit, decimal_pos=2, force_grouping=True),
     )
+
 
 def get_daily_sales_data():
     today = timezone.now().date()

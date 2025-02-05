@@ -14,13 +14,13 @@ class OutflowForm(forms.ModelForm):
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
         }
         labels = {
-            'product' : 'Produto',
+            'product': 'Produto',
             'quantity': 'Quantidade',
             'description': 'Descrição',
         }
 
     def clean_quantity(self):
-        quantity = self.cleaned_data.get('quantity') 
+        quantity = self.cleaned_data.get('quantity')
         product = self.cleaned_data.get('product')
 
         if quantity > product.quantity:

@@ -5,11 +5,13 @@
 {% endblock %}
 
 {% block content %}
-
+  {% if perms.products.view_product and perms.inflow.view_inflow %}
     {% include 'components/_product_metrics.html' %}
-  
-    {% include 'components/_sales_metrics.html' %}
+  {% endif %}
 
+  {% if perms.outflows.view_outflow %}
+    {% include 'components/_sales_metrics.html' %}
+  {% endif %}
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

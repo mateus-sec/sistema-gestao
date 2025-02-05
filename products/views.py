@@ -5,7 +5,8 @@ from django.views.generic import ListView, CreateView, DetailView, UpdateView, D
 from app import metrics
 from brands.models import Brand
 from categories.models import Category
-from . import models, forms
+from . import models, forms, serializers
+
 
 class ProductListView(LoginRequiredMixin, PermissionRequiredMixin, ListView):
     model = models.Product
@@ -70,11 +71,11 @@ class ProductDeleteView(LoginRequiredMixin, PermissionRequiredMixin, DeleteView)
     permission_required = 'products.delete_product'
 
 
-# class ProductCreateListAPIView(generics.ListCreateAPIView):
-#     queryset = models.Product.objects.all()
-#     serializer_class = serializers.ProductSerializer
+class ProductCreateListAPIView(generics.ListCreateAPIView):
+    queryset = models.Product.objects.all()
+    serializer_class = serializers.ProductSerializer
 
 
-# class ProductRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = models.Product.objects.all()
-#     serializer_class = serializers.ProductSerializer
+class ProductRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = models.Product.objects.all()
+    serializer_class = serializers.ProductSerializer

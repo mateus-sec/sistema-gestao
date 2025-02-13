@@ -6,17 +6,24 @@
 # Requisitos
 
 - Python (3.7 ou superior)
+- Docker 
 
 
-# Instalação das Dependências
-
-Instale as dependências do projeto usando o comando:
+# PYTHON
 
 ``` bash
+python -m venv venv
+source venv/bin/activate - Windows: venv\Scripts\activate
 pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
 
 ```
+# DOCKER
 
-
-
-
+``` bash
+docker-compose up --build
+docker exec -it <container> /bin/bash 
+python manage.py createsuperuser
+```

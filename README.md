@@ -9,7 +9,7 @@
 - Docker 
 
 
-# PYTHON
+# Python
 
 ``` bash
 python -m venv venv
@@ -20,7 +20,7 @@ python manage.py createsuperuser
 python manage.py runserver
 
 ```
-# DOCKER
+# Docker
 
 ``` bash
 docker-compose up --build

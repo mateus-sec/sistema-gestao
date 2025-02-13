@@ -18,6 +18,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
+http://localhost:8000
 
 ```
 # Docker
@@ -26,4 +27,6 @@ python manage.py runserver
 docker-compose up --build
 docker exec -it <container> /bin/bash 
 python manage.py createsuperuser
+http://localhost:8000
+
 ```
